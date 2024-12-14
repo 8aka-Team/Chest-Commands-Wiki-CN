@@ -1,11 +1,13 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  future: {
+    experimental_faster: true,
+  },
   title: 'Chest-Commands-Wiki-CN',
   tagline: 'Chest-Commands-Wiki 汉化',
   favicon: 'img/favicon.ico',
@@ -14,7 +16,7 @@ const config = {
   url: 'https://postyizhan.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Chest-Commands-Wiki-CN/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -31,7 +33,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans', 'en'],
+    locales: ['zh-Hans'],
   },
 
   presets: [
@@ -59,6 +61,13 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      zoom: {
+        selector: '.markdown :not(em) > img',
+        background: {
+          light: 'rgb(255, 255, 255)',
+          dark: 'rgb(50, 50, 50)',
+        },
+      },
       navbar: {
         title: 'Chest-Commands-Wiki-CN',
         logo: {
@@ -126,28 +135,16 @@ const config = {
       },
       // 深浅主题
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: prismThemes.vsLight,
+        darkTheme: prismThemes.vsDark,
       },
       // 颜色随系统切换
       colorMode: {
+        defaultMode: 'light',
+        disableSwitch: false,
         respectPrefersColorScheme: true,
       },
     }),
-
-    themes: [
-      [
-        require.resolve("@easyops-cn/docusaurus-search-local"),
-        {
-          hashed: true,
-          language: ["en", "zh"],
-          highlightSearchTermsOnTargetPage: true,
-          explicitSearchResultPath: true,
-          indexBlog: false,
-          docsRouteBasePath: "/"
-        },
-      ],
-    ],
 };
 
 module.exports = config;

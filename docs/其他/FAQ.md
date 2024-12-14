@@ -13,7 +13,7 @@ sidebar_position: 1
 https://yaml-online-parser.appspot.com 可以帮助你解决这类问题
 
 ## 如何配置多个菜单？
-在 `/plugins/CestCommands/menu/` 文件夹中创建一个新文件，[就像这样](../BASICS/菜单.md)
+在 `/plugins/CestCommands/menu/` 文件夹中创建一个新文件，[就像这样](../基础/菜单.md)
 
 ## /cc (Startup error)
 
