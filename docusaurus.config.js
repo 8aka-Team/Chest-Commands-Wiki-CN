@@ -6,6 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  future: {
+    experimental_faster: true,
+  },
   title: 'Chest-Commands-Wiki-CN',
   tagline: 'Chest-Commands-Wiki 汉化',
   favicon: 'img/favicon.ico',
