@@ -62,6 +62,13 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      zoom: {
+        selector: '.markdown :not(em) > img',
+        background: {
+          light: 'rgb(255, 255, 255)',
+          dark: 'rgb(50, 50, 50)',
+        },
+      },
       navbar: {
         title: 'Chest-Commands-Wiki-CN',
         logo: {
@@ -129,28 +136,21 @@ const config = {
       },
       // 深浅主题
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: prismThemes.vsLight,
+        darkTheme: prismThemes.vsDark,
       },
       // 颜色随系统切换
       colorMode: {
+        defaultMode: 'light',
+        disableSwitch: false,
         respectPrefersColorScheme: true,
       },
     }),
 
-    themes: [
-      [
-        require.resolve("@easyops-cn/docusaurus-search-local"),
-        {
-          hashed: true,
-          language: ["en", "zh"],
-          highlightSearchTermsOnTargetPage: true,
-          explicitSearchResultPath: true,
-          indexBlog: false,
-          docsRouteBasePath: "/"
-        },
-      ],
-    ],
+  themes: [
+    '@docusaurus/theme-mermaid'
+
+  ],
 };
 
 module.exports = config;
