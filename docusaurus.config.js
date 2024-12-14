@@ -43,7 +43,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
           editUrl:
-            'https://github.com/postyizhan/Chest-Commands-Wiki-CN/blob/main'
+            'https://github.com/8aka-Team/Chest-Commands-Wiki-CN/blob/main'
         },
         blog: false,
         theme: {
