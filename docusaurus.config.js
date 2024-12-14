@@ -41,6 +41,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          sidebarCollapsible: false,
           routeBasePath: '/',
           editUrl:
             'https://github.com/8aka-Team/Chest-Commands-Wiki-CN/blob/main'
